@@ -25,8 +25,8 @@ def send_mail(patient_id, name, age, sex, address, contact, mail, desease, f_pre
     class PDF(FPDF):
         def header(self):
             #logo
-            self.image('C:/Users/kshah/OneDrive/Desktop/test_major_project/mail/code.jpg', 8, 8, 15)
-            self.image('C:/Users/kshah/OneDrive/Desktop/test_major_project/mail/R.jpg', 187, 7, 15)
+            self.image('C:/Users/kshah/OneDrive/Desktop/test_major_project/Python-Final-project/mail/code.jpg', 8, 8, 15)
+            self.image('C:/Users/kshah/OneDrive/Desktop/test_major_project/Python-Final-project/mail/R.jpg', 187, 7, 15)
             #font
             self.add_font('Lucida Bright','',r'C:/Windows/Fonts/LCALLIG.TTF', uni=True) # uni = True does true type font subset embedding
             self.set_font('Lucida Bright','U',20)
@@ -68,7 +68,7 @@ def send_mail(patient_id, name, age, sex, address, contact, mail, desease, f_pre
     pdf.set_y(y_axis_initial)
     pdf.set_font('times', 'U', 16)
     pdf.cell(0,10,"Doctor's Sign with Date", ln = 1, align='R')
-    a = "C:/Users/kshah/OneDrive/Desktop/test_major_project/Paitent_Details_PDF/"
+    a = "C:/Users/kshah/OneDrive/Desktop/test_major_project/Python-Final-project/Paitent_Details_PDF/"
     pdf.output(f"{a}{name}.pdf")
 
 
@@ -90,7 +90,7 @@ def send_mail(patient_id, name, age, sex, address, contact, mail, desease, f_pre
     context = ssl.create_default_context()
 
 
-    files = f"C:/Users/kshah/OneDrive/Desktop/test_major_project/Paitent_Details_PDF/{name}.pdf"
+    files = f"C:/Users/kshah/OneDrive/Desktop/test_major_project/Python-Final-project/Paitent_Details_PDF/{name}.pdf"
     with open (files, 'rb') as m:
         file_data = m.read()
         file_name = name + ".pdf"
