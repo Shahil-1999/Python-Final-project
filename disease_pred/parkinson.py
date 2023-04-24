@@ -51,7 +51,7 @@ def parkinson():
 
 
     # converting Data in the form of hundred
-    df.iloc[:,:8] = (df.iloc[:, :8])#.mul(100).astype(int)
+    # df.iloc[:,:8] = (df.iloc[:, 8:9])
  
 
 
