@@ -73,7 +73,7 @@ def send_mail(patient_id, name, age, sex, address, contact, mail, desease, f_pre
 
 
     email_sender = "shahil.official.college@gmail.com"
-    pwd_sender = os.environ.get("Email_Password")
+    pwd_sender = "fotammwjxavbeank" #os.environ.get("Email_Password")   
     receiver = mail
     # msg = MIMEMultipart()
 
