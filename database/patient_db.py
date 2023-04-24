@@ -10,7 +10,7 @@ def insert_patient(patient_id, name, sex, age, address, contact, mail, disease, 
     mycursor.execute("use city_hospitals")
     
      # creating the tables for storing patient details.
-    mycursor.execute("create table if not exists patient_detail(patient_id int(4) primary key, name varchar(30) ,sex varchar(15),age int(3),address varchar(50),contact varchar(15),mail varchar(40), disease varchar(80), breasr_cancer_prediction varchar(20), parkinson_disease_prediction varchar(20))")
+    mycursor.execute("create table if not exists patient_detail(patient_id varchar(4) primary key, name varchar(30) ,sex varchar(15),age varchar(3),address varchar(50),contact varchar(15),mail varchar(40), disease varchar(80), breasr_cancer_prediction varchar(20), parkinson_disease_prediction varchar(20))")
 
     # Inserting Patient Details
     mycursor.execute("insert into patient_detail values('" + patient_id + "','" + name + "','" + sex + "','" + age + "','" + address + "','" + contact + "','" + mail + "','" + disease + "','" + f_pred + "','" + p_pred + "')")

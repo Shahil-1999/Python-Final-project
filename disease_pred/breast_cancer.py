@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 def breast_cancer():
 
-    df = pd.read_csv('C:/Users/kshah/OneDrive/Desktop/test_major_project/disease_pred/br.csv')
+    df = pd.read_csv('C:/Users/kshah/OneDrive/Desktop/test_major_project/Python-Final-project/disease_pred/br.csv')
     
     # histogram before applying feature engineering
     # df.hist(figsize=(90,90))

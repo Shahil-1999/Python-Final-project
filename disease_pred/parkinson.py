@@ -19,7 +19,7 @@ def parkinson():
 
 
 
-    df = pd.read_csv('C:/Users/kshah/OneDrive/Desktop/test_major_project/disease_pred/parkinsons.csv')
+    df = pd.read_csv('C:/Users/kshah/OneDrive/Desktop/test_major_project/Python-Final-project/disease_pred/parkinsons.csv')
     # print(df.info())
     # print(df.describe())
     df.isnull().sum()#checking for missing values
@@ -51,7 +51,7 @@ def parkinson():
 
 
     # converting Data in the form of hundred
-    df.iloc[:,:8] = (df.iloc[:, :8]).mul(100).astype(int)
+    df.iloc[:,:8] = (df.iloc[:, :8])#.mul(100).astype(int)
  
 
 
@@ -149,17 +149,18 @@ def parkinson():
     
     print("Enter your Several measures of variation in amplitude(0 - 5)")
     sp.speak("Enter your Several measures of variation in amplitude(0 - 5)")
-    # Shimar = cmd.takeCommand().lower()
-    # print(Shimar)
-    # sp.speak(Shimar)
-    Shimar = input('Enter variation in amplitude: ')
+    Shimar = cmd.takeCommand().lower()
+    print(Shimar)
+    sp.speak(Shimar)
+    # Shimar = input('Enter variation in amplitude: ')
+
     
     print("Enter your Several measures of variation in fundamental frequency (0 - 3)")
     sp.speak("Enter your Several measures of variation in fundamental frequency (0 - 3)")
-    # Jitter = cmd.takeCommand().lower()
-    # print(Jitter)
-    # sp.speak(Jitter)
-    Jitter= input('Enter fundamental frequency: ')
+    Jitter = cmd.takeCommand().lower()
+    print(Jitter)
+    sp.speak(Jitter)
+    # Jitter= input('Enter fundamental frequency: ')
 
 
     p_pred = clf.predict([[D2, RPDE, PPE, spread2, DFA, HNR,Shimar, Jitter]])

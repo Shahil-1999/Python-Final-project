@@ -100,7 +100,7 @@ while (True):
                                     press 3 for Show patient database
                                     press 4 for Sign Out
                                                     """)
-
+                        
                         a = int(input("ENTER YOUR CHOICE: "))
                         if a == 1:
                             print("""
@@ -112,7 +112,9 @@ while (True):
                                     press 1 for Log patient Record
                                     press 2 for Discharge Summary
                                     """)
-
+                        
+                            
+                            
                             x = int(input("ENTER YOUR CHOICE: "))
                             if x == 1:
 
@@ -165,6 +167,7 @@ while (True):
                                     
                                     if br_cancer == "y":
                                         f_pred = b_cancer.breast_cancer()
+                                        print(f_pred)
                                     
                                     print("Prediction parkinson Disease")
                                     sp.speak('prediction parkinson Disease')

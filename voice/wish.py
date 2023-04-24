@@ -8,7 +8,7 @@ def wishMe():
         sp.speak("Good Morning!")
 
     elif hour >= 12 and hour < 18:
-        sp.speak("Good Afternoon")
+        sp.speak("Jai Shree Ram")
 
     else:
         sp.speak("Good Evening")
