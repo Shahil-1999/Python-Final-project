@@ -30,6 +30,7 @@ def send_mail(patient_id, name, age, sex, address, contact, mail, desease, f_pre
             #font
             self.add_font('Lucida Bright','',r'C:/Windows/Fonts/LCALLIG.TTF', uni=True) # uni = True does true type font subset embedding
             self.set_font('Lucida Bright','U',20)
+            # RGB
             self.set_text_color(134,108,15)
             # Title
             self.cell(0,10,'Disease prediction System for',ln=True, align='C',)

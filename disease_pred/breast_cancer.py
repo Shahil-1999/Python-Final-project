@@ -10,6 +10,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 
 
+
 def breast_cancer():
 
     df = pd.read_csv('C:/Users/kshah/OneDrive/Desktop/test_major_project/Python-Final-project/disease_pred/br.csv')
@@ -27,7 +28,8 @@ def breast_cancer():
     # a1 = body_p.corr()   
     # x1 = a1['class'].sort_values(ascending=False)
     df = df.iloc[:, 1:6]
-    x_train, x_test, y_train, y_test = train_test_split(df.drop(columns=['diagnosis']), df['diagnosis'], test_size=0.2, random_state=42)
+    x_train, x_test, y_train, y_test = train_test_split(df.drop(columns=['diagnosis']), df['diagnosis'], test_size=0.2, random_state = 42)
+    
     clf = svm.SVC(kernel='linear')
     clf.fit(x_train, y_train)
     
@@ -86,6 +88,7 @@ def breast_cancer():
 
 
     preds = clf.predict([[radius_mean, texture_mean, perimeter_mean, area_mean]])
+    
     f_pred = (' '.join(preds))
     
     if f_pred == 'B':

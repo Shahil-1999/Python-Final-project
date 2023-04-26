@@ -82,7 +82,7 @@ def parkinson():
 
 
     # Splitting the data into testing and training set
-    x_train, x_test, y_train, y_test = train_test_split(df.drop(columns=['status']), df['status'], test_size=0.2, random_state=42)
+    x_train, x_test, y_train, y_test = train_test_split(df.drop(columns=['status']), df['status'], test_size=0.2, random_state = 42)
 
     # Model Training (DecisionTreeClassifier)
     clf = DecisionTreeClassifier()
@@ -107,39 +107,39 @@ def parkinson():
     
     
     
-    print("Enter your First nonlinear dynamical complexity measures (142 - 367)")
-    sp.speak("Enter your First nonlinear dynamical complexity measures (142 - 367)")
+    print("Enter your First nonlinear dynamical complexity measures (1.42 - 3.67)")
+    sp.speak("Enter your First nonlinear dynamical complexity measures (1.42 - 3.67)")
     D2 = cmd.takeCommand().lower()
     print(D2)
     sp.speak(D2)
     
-    print("Enter your second nonlinear dynamical complexity measures (25 - 68)")
-    sp.speak("Enter your second nonlinear dynamical complexity measures (25 - 68)")
+    print("Enter your second nonlinear dynamical complexity measures (0.25 - 0.68)")
+    sp.speak("Enter your second nonlinear dynamical complexity measures (0.25 - 0.68)")
     RPDE = cmd.takeCommand().lower()
     print(RPDE)
     sp.speak(RPDE)
     
     
-    print('Enter your third nonlinear measures of fundamental frequency variation (4 - 52)')
-    sp.speak('Enter your third nonlinear measures of fundamental frequency variation (4 - 52)')
+    print('Enter your third nonlinear measures of fundamental frequency variation (0.04 - 0.52)')
+    sp.speak('Enter your third nonlinear measures of fundamental frequency variation (0.04 - 0.52)')
     PPE = cmd.takeCommand().lower()
     print(PPE)
     sp.speak(PPE)
     
-    print("Enter your nonlinear fundamental frequency variation (0 - 45)")
-    sp.speak("Enter your nonlinear fundamental frequency variation (0 - 45)")
+    print("Enter your nonlinear fundamental frequency variation (0.00 - 0.45)")
+    sp.speak("Enter your nonlinear fundamental frequency variation (0.00 - 0.45)")
     spread2 = cmd.takeCommand().lower()
     print(spread2)
     sp.speak(spread2)
     
-    print("Enter your Signal fractal scaling exponent (57 - 82)")
-    sp.speak("Enter your Signal fractal scaling exponent (57 - 82)")
+    print("Enter your Signal fractal scaling exponent (0.57 - 0.82)")
+    sp.speak("Enter your Signal fractal scaling exponent (0.57 - 0.82)")
     DFA = cmd.takeCommand().lower()
     print(DFA)
     sp.speak(DFA)
     
-    print("Enter your ratio of noise to tonal components in the voice (844 - 3304)")
-    sp.speak("Enter your ratio of noise to tonal components in the voice (844 - 3304)")
+    print("Enter your ratio of noise to tonal components in the voice (8.44 - 33.04)")
+    sp.speak("Enter your ratio of noise to tonal components in the voice (8.44 - 33.04)")
     HNR = cmd.takeCommand().lower()
     print(HNR)
     sp.speak(HNR)
@@ -147,20 +147,20 @@ def parkinson():
 
     
     
-    print("Enter your Several measures of variation in amplitude(0 - 5)")
-    sp.speak("Enter your Several measures of variation in amplitude(0 - 5)")
+    print("Enter your Several measures of variation in amplitude(0.00 - 0.05)")
+    sp.speak("Enter your Several measures of variation in amplitude(0.00 - 0.05)")
     Shimar = cmd.takeCommand().lower()
     print(Shimar)
     sp.speak(Shimar)
-    # Shimar = input('Enter variation in amplitude: ')
+  
 
     
-    print("Enter your Several measures of variation in fundamental frequency (0 - 3)")
-    sp.speak("Enter your Several measures of variation in fundamental frequency (0 - 3)")
+    print("Enter your Several measures of variation in fundamental frequency (0.00 - 0.03)")
+    sp.speak("Enter your Several measures of variation in fundamental frequency (0.00 - 0.03)")
     Jitter = cmd.takeCommand().lower()
     print(Jitter)
     sp.speak(Jitter)
-    # Jitter= input('Enter fundamental frequency: ')
+ 
 
 
     p_pred = clf.predict([[D2, RPDE, PPE, spread2, DFA, HNR,Shimar, Jitter]])
