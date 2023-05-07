@@ -24,9 +24,9 @@ while (True):
                         2. Sign In
                         3. Show Admin database
                         """)
-        # sp.speak("""press 1 for Registration
-        #             press 2 for Sign In
-        #             press 3 for Show Admin database""")
+        sp.speak("""press 1 for Registration
+                    press 2 for Sign In
+                    press 3 for Show Admin database""")
         
 
         r = int(input("enter your choice: "))
@@ -94,12 +94,12 @@ while (True):
                                     3. Show patient database
                                     4. Sign Out
                                                     """)
-                        # sp.speak(""""
-                        #             press 1 for Administration
-                        #             press 2 for Patient(Details)
-                        #             press 3 for Show patient database
-                        #             press 4 for Sign Out
-                        #                             """)
+                        sp.speak(""""
+                                    press 1 for Administration
+                                    press 2 for Patient(Details)
+                                    press 3 for Show patient database
+                                    press 4 for Sign Out
+                                                    """)
                         
                         a = int(input("ENTER YOUR CHOICE: "))
                         if a == 1:
@@ -108,10 +108,10 @@ while (True):
                                     2. Discharge Summary
                                     """)
 
-                            # sp.speak("""
-                            #         press 1 for Log patient Record
-                            #         press 2 for Discharge Summary
-                            #         """)
+                            sp.speak("""
+                                    press 1 for Log patient Record
+                                    press 2 for Discharge Summary
+                                    """)
                         
                             
                             
@@ -129,39 +129,39 @@ while (True):
                                 if b == 1:
                                     
                                     print("Please Enter Your patient ID")
-                                    # sp.speak("Please Enter Your patient ID")
+                                    sp.speak("Please Enter Your patient ID")
                                     patient_id = input("Patient ID: ")
 
                                     print("Please Enter Your Name")
-                                    # sp.speak("Please Enter Your Name")
+                                    sp.speak("Please Enter Your Name")
                                     name = input("Name: ")
 
                                     print("Please Enter Your Gender")
-                                    # sp.speak("Please Enter Your Gender")
+                                    sp.speak("Please Enter Your Gender")
                                     sex = input("Gender: ")
 
                                     print("Please Enter your Age")
-                                    # sp.speak("Please Enter your Age")
+                                    sp.speak("Please Enter your Age")
                                     age = input("Age: ")
 
                                     print("Please Enter Your Address")
-                                    # sp.speak("Please Enter Your Address")
+                                    sp.speak("Please Enter Your Address")
                                     address = input("Address: ")
 
                                     print("Please Enter Your Contact Number")
-                                    # sp.speak("Please Enter Your Contact Number")
+                                    sp.speak("Please Enter Your Contact Number")
                                     contact = input("Contact Details: ")
 
                                     print("Please Enter Your Email")
-                                    # sp.speak("Please Enter Your Email")
+                                    sp.speak("Please Enter Your Email")
                                     mail = input("Mail Id: ")
 
                                     print("Please Enter Your Disease")
-                                    # sp.speak("Please Enter Your Disease")
+                                    sp.speak("Please Enter Your Disease")
                                     disease = input("Disease: ")
 
                                     print("Prediction Breast Cancer?")
-                                    # sp.speak("Prediction Breast Cancer?")
+                                    sp.speak("Prediction Breast Cancer?")
                                     br_cancer = input("prediction breast cancer? (y/n): ")
                                     f_pred = "NA"
                                     
@@ -170,13 +170,13 @@ while (True):
                                         print(f_pred)
                                     
                                     print("Prediction parkinson Disease")
-                                    # sp.speak('prediction parkinson Disease')
+                                    sp.speak('prediction parkinson Disease')
                                     p_cancer = input("prediction parkinson disease? (y/n): ")
                                     p_pred = "NA"
 
                                     
                                     if p_cancer == "y":
-                                        print("parkinson abcd")
+                                        # print("parkinson abcd")
                                         p_pred = park.parkinson()
                                         print(p_pred)
                                     
@@ -258,7 +258,7 @@ while (True):
                         # if user wants to see the details of PATIENT
                         elif a == 2:
                             
-                            # print("please Enter patient name")
+                          
                             sp.speak("please Enter patient ID")
                             patient_id = input("Enter The Patient ID: ")
                             
@@ -316,7 +316,7 @@ while (True):
             i = int(input("Enter Your Choice: "))
             if i == 1:
 
-                # print("Please Enter Your Password")
+              
                 sp.speak("Please Enter Your Password")
                 pwd = str(input("Enter Your Password: "))
                 if pwd == Admin_passwd:
