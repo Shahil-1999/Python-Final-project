@@ -4,16 +4,16 @@ mysql = mysql.connector.connect(host = "localhost", user = "root", passwd = "Sha
 mycursor = mysql.cursor()
 
 
-def insert_patient(patient_id, name, sex, age, address, contact, mail, disease, f_pred, p_pred):
+def insert_patient(patient_id, name, sex, age, address, contact, mail, disease,  p_pred):
 
     mycursor.execute("create database if not exists city_hospitals")
     mycursor.execute("use city_hospitals")
     
      # creating the tables for storing patient details.
-    mycursor.execute("create table if not exists patient_detail(patient_id varchar(4) primary key, name varchar(30) ,sex varchar(15),age varchar(3),address varchar(50),contact varchar(15),mail varchar(40), disease varchar(80), breasr_cancer_prediction varchar(20), parkinson_disease_prediction varchar(20))")
+    mycursor.execute("create table if not exists patient_detail(patient_id varchar(4) primary key, name varchar(30) ,sex varchar(15),age varchar(3),address varchar(50),contact varchar(15),mail varchar(40), disease varchar(80), parkinson_disease_prediction varchar(20))")
 
     # Inserting Patient Details
-    mycursor.execute("insert into patient_detail values('" + patient_id + "','" + name + "','" + sex + "','" + age + "','" + address + "','" + contact + "','" + mail + "','" + disease + "','" + f_pred + "','" + p_pred + "')")
+    mycursor.execute("insert into patient_detail values('" + patient_id + "','" + name + "','" + sex + "','" + age + "','" + address + "','" + contact + "','" + mail + "','" + disease + "','" + p_pred + "')")
     mysql.commit()
     
 

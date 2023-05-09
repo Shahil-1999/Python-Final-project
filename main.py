@@ -1,5 +1,6 @@
 import os
 import voice.speak as sp
+import voice.command as cmd
 import voice.wish as ws
 import mail.email as email
 import disease_pred.breast_cancer as b_cancer
@@ -16,8 +17,8 @@ while (True):
 
     while (True):
         ws.wishMe()
-        print("Disease Prediction System for Parkinson Disease and Breast Cancer using Voice Command")
-        sp.speak("Disease Prediction System for Parkinson Disease and Breast Cancer using Voice Command")
+        print("Disease Prediction System for Parkinson Disease using Voice Command")
+        sp.speak("Disease Prediction System for Parkinson Disease using Voice Command")
         
         print("""       
                         1. Registration
@@ -127,47 +128,198 @@ while (True):
 
                                 # adding new patient
                                 if b == 1:
+                                    print("If You Want to insert patient details manually then press M, or If you want to add patient details through voice then press V")
+                                    sp.speak("If You Want to insert patient details manually then press M, or If you want to add patient details through voice then press V")
+                                    p_d = input("Enter Your response: ")
                                     
-                                    print("Please Enter Your patient ID")
-                                    sp.speak("Please Enter Your patient ID")
-                                    patient_id = input("Patient ID: ")
-
-                                    print("Please Enter Your Name")
-                                    sp.speak("Please Enter Your Name")
-                                    name = input("Name: ")
-
-                                    print("Please Enter Your Gender")
-                                    sp.speak("Please Enter Your Gender")
-                                    sex = input("Gender: ")
-
-                                    print("Please Enter your Age")
-                                    sp.speak("Please Enter your Age")
-                                    age = input("Age: ")
-
-                                    print("Please Enter Your Address")
-                                    sp.speak("Please Enter Your Address")
-                                    address = input("Address: ")
-
-                                    print("Please Enter Your Contact Number")
-                                    sp.speak("Please Enter Your Contact Number")
-                                    contact = input("Contact Details: ")
-
-                                    print("Please Enter Your Email")
-                                    sp.speak("Please Enter Your Email")
-                                    mail = input("Mail Id: ")
-
-                                    print("Please Enter Your Disease")
-                                    sp.speak("Please Enter Your Disease")
-                                    disease = input("Disease: ")
-
-                                    print("Prediction Breast Cancer?")
-                                    sp.speak("Prediction Breast Cancer?")
-                                    br_cancer = input("prediction breast cancer? (y/n): ")
-                                    f_pred = "NA"
                                     
-                                    if br_cancer == "y":
-                                        f_pred = b_cancer.breast_cancer()
-                                        print(f_pred)
+                                    if p_d.lower() == 'm':
+                                        print("Please Enter Your patient ID")
+                                        sp.speak("Please Enter Your patient ID")
+                                        patient_id = input("Patient ID: ")
+
+                                        print("Please Enter Your Name")
+                                        sp.speak("Please Enter Your Name")
+                                        name = input("Name: ")
+
+                                        print("Please Enter Your Gender")
+                                        sp.speak("Please Enter Your Gender")
+                                        sex = input("Gender: ")
+
+                                        print("Please Enter your Age")
+                                        sp.speak("Please Enter your Age")
+                                        age = input("Age: ")
+
+                                        print("Please Enter Your Address")
+                                        sp.speak("Please Enter Your Address")
+                                        address = input("Address: ")
+
+                                        print("Please Enter Your Contact Number")
+                                        sp.speak("Please Enter Your Contact Number")
+                                        contact = input("Contact Details: ")
+
+                                        print("Please Enter Your Email")
+                                        sp.speak("Please Enter Your Email")
+                                        mail = input("Mail Id: ")
+
+                                        print("Please Enter Your Disease")
+                                        sp.speak("Please Enter Your Disease")
+                                        disease = input("Disease: ")
+
+                                    elif p_d.lower() == "v":
+                                        
+                                    
+                                        
+                                    
+                                    
+                                        print("Please Enter Your patient ID")
+                                        sp.speak("Please Enter Your patient ID")
+                                        patient_id = cmd.takeCommand().lower()
+                                        print(patient_id)
+                                        sp.speak(patient_id)
+                                        
+                                        print("if you satisfy with this value then press Y, else press N")
+                                        sp.speak("if you satisfy with this value then press Y, else press N")
+                                        patient_id_satisfaction = input("Enter your value : ")
+                                        if patient_id_satisfaction.lower() == "n":
+                                            sp.speak("Enter New Value: ")
+                                            new_input_patient_id = input("Enter New Value : ")
+                                            patient_id = (new_input_patient_id)
+                                            print(patient_id)
+                                            sp.speak(patient_id)
+                                      
+                                            
+                                             
+                                        
+                                        print("Please Enter Your Name")
+                                        sp.speak("Please Enter Your Name")
+                                        name = cmd.takeCommand().lower()
+                                        print(name)
+                                        sp.speak(name)
+                                        
+                                        print("if you satisfy with this value then press Y, else press N")
+                                        sp.speak("if you satisfy with this value then press Y, else press N")
+                                        name_satisfaction = input("Enter your value : ")
+                                        if name_satisfaction.lower() == "n":
+                                            sp.speak("Enter New Value: ")
+                                            new_input_name = input("Enter New Value : ")
+                                            name = (new_input_name)
+                                            print(name)
+                                            sp.speak(name)
+                                            
+                                            
+                                        print("Please Enter Your Gender")
+                                        sp.speak("Please Enter Your Gender")
+                                        sex = cmd.takeCommand().lower()
+                                        print(sex)
+                                        sp.speak(sex)
+                                        
+                                        print("if you satisfy with this value then press Y, else press N")
+                                        sp.speak("if you satisfy with this value then press Y, else press N")
+                                        gender_satisfaction = input("Enter your value : ")
+                                        if gender_satisfaction.lower() == "n":
+                                            sp.speak("Enter New Value: ")
+                                            new_input_gender = input("Enter New Value : ")
+                                            sex = (new_input_gender)
+                                            print(sex)
+                                            sp.speak(sex)
+                                            
+                                            
+
+                                        print("Please Enter Your Age")
+                                        sp.speak("Please Enter Your Age")
+                                        age = cmd.takeCommand().lower()
+                                        print(age)
+                                        sp.speak(age)
+                                        
+                                        print("if you satisfy with this value then press Y, else press N")
+                                        sp.speak("if you satisfy with this value then press Y, else press N")
+                                        age_satisfaction = input("Enter your value : ")
+                                        if age_satisfaction.lower() == "n":
+                                            sp.speak("Enter New Value: ")
+                                            new_input_age = input("Enter New Value : ")
+                                            age= (new_input_age)
+                                            print(age)
+                                            sp.speak(age)
+
+                                        print("Please Enter Your Address")
+                                        sp.speak("Please Enter Your Address")
+                                        address = cmd.takeCommand().lower()
+                                        print(address)
+                                        sp.speak(address)
+                                        
+                                        print("if you satisfy with this value then press Y, else press N")
+                                        sp.speak("if you satisfy with this value then press Y, else press N")
+                                        address_satisfaction = input("Enter your value : ")
+                                        if address_satisfaction.lower() == "n":
+                                            sp.speak("Enter New Value: ")
+                                            new_input_address = input("Enter New Value : ")
+                                            address = (new_input_address)
+                                            print(address)
+                                            sp.speak(address)
+
+                                        print("Please Enter Your Contact number")
+                                        sp.speak("Please Enter Your contact Number")
+                                        contact = cmd.takeCommand().lower()
+                                        print(contact)
+                                        sp.speak(contact)
+                                        
+                                        print("if you satisfy with this value then press Y, else press N")
+                                        sp.speak("if you satisfy with this value then press Y, else press N")
+                                        contact_satisfaction = input("Enter your value : ")
+                                        if contact_satisfaction.lower() == "n":
+                                            sp.speak("Enter New Value: ")
+                                            new_input_contact = input("Enter New Value : ")
+                                            contact = (new_input_contact)
+                                            print(contact)
+                                            sp.speak(contact)
+
+                                        print("Please Enter Your Email")
+                                        sp.speak("Please Enter Your Email")
+                                        mail = cmd.takeCommand().lower()
+                                        print(mail)
+                                        sp.speak(mail)
+                                        
+                                        print("if you satisfy with this value then press Y, else press N")
+                                        sp.speak("if you satisfy with this value then press Y, else press N")
+                                        mail_satisfaction = input("Enter your value : ")
+                                        if mail_satisfaction.lower() == "n":
+                                            sp.speak("Enter New Value: ")
+                                            new_input_mail = input("Enter New Value : ")
+                                            mail = (new_input_mail)
+                                            print(mail)
+                                            sp.speak(mail)
+
+                                        
+                                        print("Please Enter Your Disease")
+                                        sp.speak("Please Enter Your disease")
+                                        disease = cmd.takeCommand().lower()
+                                        print(disease)
+                                        sp.speak(disease)
+                                        
+                                        print("if you satisfy with this value then press Y, else press N")
+                                        sp.speak("if you satisfy with this value then press Y, else press N")
+                                        disease_satisfaction = input("Enter your value : ")
+                                        if disease_satisfaction.lower() == "n":
+                                            sp.speak("Enter New Value: ")
+                                            new_input_disease = input("Enter New Value : ")
+                                            patient_id = (new_input_disease)
+                                            print(disease)
+                                            sp.speak(disease)
+
+                                    else:
+                                        print("Choose Valid Option")
+                                        sp.speak("Choose Valid Option")
+                                    
+
+                                    # print("Prediction Breast Cancer?")
+                                    # sp.speak("Prediction Breast Cancer?")
+                                    # br_cancer = input("prediction breast cancer? (y/n): ")
+                                    # f_pred = "NA"
+                                    
+                                    # if br_cancer == "y":
+                                    #     f_pred = b_cancer.breast_cancer()
+                                    #     print(f_pred)
                                     
                                     print("Prediction parkinson Disease")
                                     sp.speak('prediction parkinson Disease')
@@ -182,7 +334,7 @@ while (True):
                                     
                                       
                                     
-                                    p_details.insert_patient(patient_id, name, sex ,age , address, contact, mail, disease, f_pred, p_pred)
+                                    p_details.insert_patient(patient_id, name, sex ,age , address, contact, mail, disease, p_pred)
 
                                     
                                     print("""
@@ -197,8 +349,8 @@ while (True):
                                     
 
                                    
-
-                                    email.send_mail(patient_id, name, age, sex, address, contact, mail, disease, f_pred, p_pred)
+                                    print("p_pred", p_pred)
+                                    email.send_mail(patient_id, name, age, sex, address, contact, mail, disease, p_pred)
                                     sp.speak("Mail Sent Sucessfully")
 
                                 else:
@@ -221,7 +373,7 @@ while (True):
                                         b1 = 0
                                         v1 = list(i)
                                         k1 = ["PATIENT ID","NAME", "SEX", "AGE", "ADDRESS", "CONTACT",
-                                                "MAIL", "DISEASE", "BREAST CANCER PREDICTION", "PARKINSON DISEASE PRIDICTION"]
+                                                "MAIL", "DISEASE", "PARKINSON DISEASE PRIDICTION"]
                                         d1 = dict(zip(k1, v1))
                                         print(d1)
                                 else:
@@ -269,7 +421,7 @@ while (True):
                                     b = 0
                                     v = list(i)
                                     k = ["PATIENT ID", "NAME", "SEX", "AGE", "ADDRESS", "CONTACT",
-                                        "MAIL", "DISEASE", "BREAST CANCER PREDICTION", "PARKINSON DISEASE PRIDICTION"]
+                                        "MAIL", "DISEASE", "PARKINSON DISEASE PRIDICTION"]
                                     d = dict(zip(k, v))
                                     print(d)
                             else:
@@ -288,7 +440,7 @@ while (True):
                                 b = 0
                                 v = list(i)
                                 k = ["PATIENT ID","NAME", "SEX", "AGE", "ADDRESS", "CONTACT",
-                                     "MAIL", "DISEASE", "BREAST CANCER PREDICTION", "PARKINSON DISEASE PRIDICTION"]
+                                     "MAIL", "DISEASE", "PARKINSON DISEASE PRIDICTION"]
                                 d = dict(zip(k, v))
                                 print(d)
 

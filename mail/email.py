@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 # # from email.mime.multipart import MIMEMultipart
 # # from email.mime.text import MIMEText
-def send_mail(patient_id, name, age, sex, address, contact, mail, desease, f_pred, p_pred):
+def send_mail(patient_id, name, age, sex, address, contact, mail, desease, p_pred):
 #     
     # layout('P', 'U')
     # Unit ('mm','cm','in')
@@ -63,7 +63,6 @@ def send_mail(patient_id, name, age, sex, address, contact, mail, desease, f_pre
     pdf.cell(0,10, f'Contact: +91{contact}', ln=1)
     pdf.cell(0,10, f'Mail: {mail}', ln=1)
     pdf.cell(0,10, f'Disease: {desease}', ln=1)
-    pdf.cell(0,10, f'Breast Cancer Prediction: {f_pred}', ln=1)
     pdf.cell(0,10, f'Parkinson Disease Prediction: {p_pred}', ln=1)
     y_axis_initial = 255
     pdf.set_y(y_axis_initial)

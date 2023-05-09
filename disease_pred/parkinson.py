@@ -113,11 +113,41 @@ def parkinson():
     print(D2)
     sp.speak(D2)
     
+    print("if you satisfy with this value then press Y, else press N")
+    sp.speak("if you satisfy with this value then press Y, else press N")
+    
+    D2_satisfaction = input("Enter your value : ")
+    if D2_satisfaction.lower() == "n":
+        sp.speak("Enter New Value: ")
+        new_input_D2 = input("Enter New Value : ")
+        D2 = (new_input_D2)
+        print(D2)
+        sp.speak(D2)
+    # else:
+    #     os.system("pause")
+        
+    
+    
+    
+    
+    
     print("Enter your second nonlinear dynamical complexity measures (0.25 - 0.68)")
     sp.speak("Enter your second nonlinear dynamical complexity measures (0.25 - 0.68)")
     RPDE = cmd.takeCommand().lower()
     print(RPDE)
     sp.speak(RPDE)
+    
+    print("if you satisfy with this value then press Y, else press N")
+    sp.speak("if you satisfy with this value then press Y, else press N")
+    RPDE_satisfaction = input("Enter your value : ")
+    if RPDE_satisfaction.lower() == "n":
+        sp.speak("Enter New Value: ")
+        new_input_RPDE = input("Enter New Value : ")
+        RPDE = (new_input_RPDE)
+        print(RPDE)
+        sp.speak(RPDE)
+    # else:
+    #     os.system("pause")
     
     
     print('Enter your third nonlinear measures of fundamental frequency variation (0.04 - 0.52)')
@@ -126,11 +156,35 @@ def parkinson():
     print(PPE)
     sp.speak(PPE)
     
+    print("if you satisfy with this value then press Y, else press N")
+    sp.speak("if you satisfy with this value then press Y, else press N")
+    PPE_satisfaction = input("Enter your value : ")
+    if PPE_satisfaction.lower() == "n":
+        sp.speak("Enter New Value: ")
+        new_input_PPE = input("Enter New Value : ")
+        PPE = (new_input_PPE)
+        print(PPE)
+        sp.speak(PPE)
+    # else:
+    #     os.system("pause")
+    
     print("Enter your nonlinear fundamental frequency variation (0.00 - 0.45)")
     sp.speak("Enter your nonlinear fundamental frequency variation (0.00 - 0.45)")
     spread2 = cmd.takeCommand().lower()
     print(spread2)
     sp.speak(spread2)
+    
+    print("if you satisfy with this value then press Y, else press N")
+    sp.speak("if you satisfy with this value then press Y, else press N")
+    spread2_satisfaction = input("Enter your value : ")
+    if spread2_satisfaction.lower() == "n":
+        sp.speak("Enter New Value: ")
+        new_input_spread2 = input("Enter New Value : ")
+        spread2 = (new_input_spread2)
+        print(spread2)
+        sp.speak(spread2)
+    # else:
+    #     os.system("pause")
     
     print("Enter your Signal fractal scaling exponent (0.57 - 0.82)")
     sp.speak("Enter your Signal fractal scaling exponent (0.57 - 0.82)")
@@ -138,11 +192,37 @@ def parkinson():
     print(DFA)
     sp.speak(DFA)
     
+    print("if you satisfy with this value then press Y, else press N")
+    sp.speak("if you satisfy with this value then press Y, else press N")
+    DFA_satisfaction = input("Enter your value : ")
+    if DFA_satisfaction.lower() == "n":
+        sp.speak("Enter New Value: ")
+        new_input_DFA = input("Enter New Value : ")
+        DFA = (new_input_DFA)
+        print(DFA)
+        sp.speak(DFA)
+    # else:
+    #     os.system("pause")
+    
+    
+    
     print("Enter your ratio of noise to tonal components in the voice (8.44 - 33.04)")
     sp.speak("Enter your ratio of noise to tonal components in the voice (8.44 - 33.04)")
     HNR = cmd.takeCommand().lower()
     print(HNR)
     sp.speak(HNR)
+    
+    print("if you satisfy with this value then press Y, else press N")
+    sp.speak("if you satisfy with this value then press Y, else press N")
+    HNR_satisfaction = input("Enter your value : ")
+    if HNR_satisfaction.lower() == "n":
+        sp.speak("Enter New Value: ")
+        new_input_HNR = input("Enter New Value : ")
+        HNR = (new_input_HNR)
+        print(HNR)
+        sp.speak(HNR)
+    # else:
+    #     os.system("pause")
     
 
     
@@ -152,6 +232,18 @@ def parkinson():
     Shimar = cmd.takeCommand().lower()
     print(Shimar)
     sp.speak(Shimar)
+    
+    print("if you satisfy with this value then press Y, else press N")
+    sp.speak("if you satisfy with this value then press Y, else press N")
+    Shimar_satisfaction = input("Enter your value : ")
+    if Shimar_satisfaction.lower() == "n":
+        sp.speak("Enter New Value: ")
+        new_input_Shimar = input("Enter New Value : ")
+        Shimar = (new_input_Shimar)
+        print(Shimar)
+        sp.speak(Shimar)
+    # else:
+    #     os.system("pause")
   
 
     
@@ -160,6 +252,20 @@ def parkinson():
     Jitter = cmd.takeCommand().lower()
     print(Jitter)
     sp.speak(Jitter)
+    
+    print("if you satisfy with this value then press Y, else press N")
+    sp.speak("if you satisfy with this value then press Y, else press N")
+    Jitter_satisfaction = input("Enter your value : ")
+    if Jitter_satisfaction.lower() == "n":
+        sp.speak("Enter New Value: ")
+        new_input_Jitter = input("Enter New Value : ")
+        Jitter = (new_input_Jitter)
+        print(Jitter)
+        sp.speak(Jitter)
+    # else:
+    #     os.system("pause")
+    
+    
  
 
 
@@ -175,7 +281,8 @@ def parkinson():
     else:
         p_pred == 1
         predicted = 'Affected'
-        
+    
+        print("pre:", predicted)    
  
         return predicted
 
