@@ -3,7 +3,6 @@ import voice.speak as sp
 import voice.command as cmd
 import voice.wish as ws
 import mail.email as email
-import disease_pred.breast_cancer as b_cancer
 import disease_pred.parkinson as park
 import database.patient_db as p_details
 import database.staff_db as sd
