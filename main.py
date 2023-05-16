@@ -348,7 +348,7 @@ while (True):
                                     
 
                                    
-                                    print("p_pred", p_pred)
+                                    
                                     email.send_mail(patient_id, name, age, sex, address, contact, mail, disease, p_pred)
                                     sp.speak("Mail Sent Sucessfully")
 
